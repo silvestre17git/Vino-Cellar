@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Copy of VinoScan AI Cellar",
+  "description": "An intelligent wine cellar companion that identifies wine labels using AI, categorizes them, and helps you manage your collection with custom fields and CSV export.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
