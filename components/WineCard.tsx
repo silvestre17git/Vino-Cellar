@@ -101,11 +101,21 @@ const WineCard: React.FC<WineCardProps> = ({
           </p>
 
           <div className="flex items-center justify-between pt-4 border-t border-stone-100">
-            <div className="flex flex-col">
-              <span className="text-stone-400 text-[10px] uppercase font-bold tracking-widest">Est. Value</span>
-              <span className="text-stone-900 font-bold text-base">
-                {wine.price ? `$${wine.price}` : '---'}
-              </span>
+            <div className="flex gap-4">
+              <div className="flex flex-col">
+                <span className="text-stone-400 text-[10px] uppercase font-bold tracking-widest">Est. Value</span>
+                <span className="text-stone-900 font-bold text-base">
+                  {wine.price ? `$${wine.price}` : '---'}
+                </span>
+              </div>
+              {wine.binNumber && (
+                <div className="flex flex-col border-l border-stone-100 pl-4">
+                  <span className="text-stone-400 text-[10px] uppercase font-bold tracking-widest">Bin</span>
+                  <span className="text-stone-900 font-bold text-base">
+                    {wine.binNumber}
+                  </span>
+                </div>
+              )}
             </div>
             <div className="flex gap-1.5">
               {isDeleted ? (
